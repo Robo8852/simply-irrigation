@@ -109,7 +109,7 @@ export function Footer() {
                 <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-800">
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                         <p className="text-xs text-gray-500 dark:text-gray-400">
-                            &copy; {new Date().getFullYear()} Simply Irrigation LLC. All rights reserved.
+                            &copy; Costa Del Sol Digital 2026. All rights reserved.
                         </p>
                         <div className="flex gap-4 text-xs text-gray-500 dark:text-gray-400">
                             <Link href="/privacy" className="hover:text-[#4992DF] transition-colors">Privacy Policy</Link>

@@ -88,7 +88,7 @@ export default function Home() {
                 Custom-designed sprinkler systems required for your landscape's specific needs, ensuring optimal coverage and water efficiency.
               </p>
               <Link href="/services/installation" className="inline-flex items-center font-medium text-[#4992DF] hover:underline group-hover:translate-x-1 transition-transform">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Learn more about installation <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -102,7 +102,7 @@ export default function Home() {
                 Fast and reliable repairs for broken heads, leaks, controller issues, and wiring problems to prevent water waste.
               </p>
               <Link href="/services/repair" className="inline-flex items-center font-medium text-[#4992DF] hover:underline group-hover:translate-x-1 transition-transform">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Learn more about repairs <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -116,7 +116,7 @@ export default function Home() {
                 Enhance your curb appeal with our professional landscaping services, including planting, sod installation, and mulching.
               </p>
               <Link href="/services/landscaping" className="inline-flex items-center font-medium text-[#87B66D] hover:underline group-hover:translate-x-1 transition-transform">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Learn more about landscaping <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
