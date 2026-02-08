@@ -11,11 +11,13 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero.png"
+            src="/hero.jpg"
             alt="Lush green lawn with sprinkler system"
             fill
+            sizes="100vw"
             className="object-cover opacity-60"
             priority
+            quality={75}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
         </div>
@@ -160,10 +162,13 @@ export default function Home() {
             </div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/why-choose-us.png"
+                src="/why-choose-us.jpg"
                 alt="Irrigation sprinkler closeup"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
+                loading="lazy"
+                quality={75}
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#4992DF]/20 to-transparent"></div>
             </div>

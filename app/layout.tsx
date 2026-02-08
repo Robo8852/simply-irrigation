@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Professional irrigation installation, repair, and maintenance in Bradenton, Sarasota, and Lakewood Ranch, FL. Call 941-538-2593.",
     images: [
       {
-        url: "/hero.png",
+        url: "/hero.jpg",
         width: 1200,
         height: 630,
         alt: "Simply Irrigation LLC - Professional Sprinkler Services",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Simply Irrigation LLC | Bradenton, FL",
     description:
       "Expert irrigation installation, repair & maintenance. Serving Bradenton, Sarasota & Lakewood Ranch. Call 941-538-2593.",
-    images: ["/hero.png"],
+    images: ["/hero.jpg"],
   },
   robots: {
     index: true,
