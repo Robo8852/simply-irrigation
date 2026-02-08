@@ -160,8 +160,8 @@ export default function Home() {
             </div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/hero.png" // Reusing hero image for now, can be replaced later
-                alt="Irrigation system demonstration"
+                src="/why-choose-us.png"
+                alt="Irrigation sprinkler closeup"
                 fill
                 className="object-cover"
               />
