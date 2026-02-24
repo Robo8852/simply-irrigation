@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
         readTime: '5 min read',
         content: `
 <h2>Why Seasonal Adjustments Matter</h2>
-<p>Florida's climate means your irrigation needs change dramatically throughout the year. Running the same watering schedule in January as you do in July wastes water and can actually harm your lawn. Here's how to adjust your system season by season.</p>
+<p>Florida's climate means your irrigation needs change dramatically throughout the year. Whether you're in Bradenton, Sarasota, or Lakewood Ranch, running the same watering schedule in January as you do in July wastes water and can actually harm your lawn. Simply Irrigation shares how to adjust your system season by season.</p>
 
 <h2>Spring (March – May)</h2>
 <p>As temperatures rise and your lawn comes out of its semi-dormant winter state, gradually increase watering. Start with two days per week and increase to three if needed. This is also the best time for a maintenance check — have your system inspected to catch any issues from winter before the heavy-use summer months.</p>
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
         readTime: '4 min read',
         content: `
 <h2>Catching Problems Early Saves Money</h2>
-<p>A small irrigation issue today can become an expensive repair tomorrow. More importantly, a malfunctioning system wastes water and damages your lawn. Here are five signs to watch for.</p>
+<p>A small irrigation issue today can become an expensive repair tomorrow. For Bradenton and Sarasota homeowners, a malfunctioning sprinkler system wastes water and damages your lawn. Here are five signs to watch for.</p>
 
 <h2>1. Dry Patches on Your Lawn</h2>
 <p>If certain areas of your lawn are turning brown while others look fine, you likely have a coverage issue. This could be a clogged nozzle, a broken head, or a misaligned spray pattern. A quick adjustment or head replacement usually fixes the problem.</p>

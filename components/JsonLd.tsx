@@ -50,7 +50,11 @@ export const localBusinessSchema = {
         },
     ],
     priceRange: '$$',
-    sameAs: [],
+    sameAs: [
+
+        'https://www.facebook.com/simplyirrigationllc',
+        'https://www.instagram.com/simplyirrigationllc/',
+    ],
 };
 
 export const organizationSchema = {
@@ -66,4 +70,9 @@ export const organizationSchema = {
         areaServed: 'US',
         availableLanguage: ['English', 'Spanish'],
     },
+    sameAs: [
+
+        'https://www.facebook.com/simplyirrigationllc',
+        'https://www.instagram.com/simplyirrigationllc/',
+    ],
 };

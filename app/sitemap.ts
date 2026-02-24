@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { blogPosts } from '@/lib/blog';
 
 const BASE_URL = 'https://simplyirrigationllc.com';
 
@@ -20,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly' as const,
             priority: 0.8,
+        })),
+        { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+        ...blogPosts.map((post) => ({
+            url: `${BASE_URL}/blog/${post.slug}`,
+            lastModified: new Date(post.date),
+            changeFrequency: 'yearly' as const,
+            priority: 0.6,
         })),
     ];
 }

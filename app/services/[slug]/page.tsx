@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, CheckCircle, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { JsonLd } from '@/components/JsonLd';
 
 interface ServiceData {
     title: string;
@@ -149,9 +150,23 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     return params.then(({ slug }) => {
         const service = services[slug];
         if (!service) return {};
+        const desc = service.description.slice(0, 160);
         return {
             title: `${service.title} | Simply Irrigation LLC`,
-            description: service.description.slice(0, 160),
+            description: desc,
+            openGraph: {
+                title: service.hero,
+                description: desc,
+                type: 'website',
+                url: `https://simplyirrigationllc.com/services/${slug}`,
+                images: [{ url: '/hero.jpg', width: 1200, height: 630, alt: service.title }],
+            },
+            twitter: {
+                card: 'summary_large_image',
+                title: service.hero,
+                description: desc,
+                images: ['/hero.jpg'],
+            },
         };
     });
 }
@@ -161,8 +176,40 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     const service = services[slug];
     if (!service) notFound();
 
+    const serviceSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: service.title,
+        description: service.description,
+        provider: {
+            '@type': 'LocalBusiness',
+            name: 'Simply Irrigation LLC',
+            telephone: '941-538-2593',
+            url: 'https://simplyirrigationllc.com',
+        },
+        areaServed: [
+            { '@type': 'City', name: 'Bradenton' },
+            { '@type': 'City', name: 'Sarasota' },
+            { '@type': 'City', name: 'Lakewood Ranch' },
+            { '@type': 'City', name: 'Palmetto' },
+        ],
+        url: `https://simplyirrigationllc.com/services/${slug}`,
+    };
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: service.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: { '@type': 'Answer', text: faq.a },
+        })),
+    };
+
     return (
         <div className="flex flex-col min-h-screen">
+            <JsonLd data={serviceSchema} />
+            <JsonLd data={faqSchema} />
             {/* Hero */}
             <section className="bg-zinc-900 py-16 text-white md:py-24">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">

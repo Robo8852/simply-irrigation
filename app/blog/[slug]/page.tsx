@@ -16,6 +16,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: post.title,
         description: post.description,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            type: 'article',
+            publishedTime: post.date,
+            url: `https://simplyirrigationllc.com/blog/${post.slug}`,
+            images: [{ url: '/hero.jpg', width: 1200, height: 630, alt: post.title }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.description,
+            images: ['/hero.jpg'],
+        },
     };
 }
 
